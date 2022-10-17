@@ -18,3 +18,11 @@ Shown is the daily growth advantage over {baseline} in percent.
 ## Variant share by country
 
 ![Variant share by country](plots/variant-share-latest.png)
+
+### In tabular form, per country
+
+{var_prop_tab}
+
+Shown is the estimated variant proportion on {date} in percent. 
+
+Values in parentheses mean that the variant has not been detected in the specific country and are imputed instead.
