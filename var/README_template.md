@@ -13,7 +13,7 @@ Latest update: {date}.
 
 {growth_rate_tab}
 
-Shown is the daily growth advantage over {baseline} in percent.
+Shown is the daily growth advantage over {baseline} in percent. Errors are standard errors.
 
 ## Variant share by country
 
