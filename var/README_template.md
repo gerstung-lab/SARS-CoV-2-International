@@ -19,6 +19,10 @@ Shown is the daily growth advantage over {baseline} in percent. Errors are stand
 
 ![Variant share by country](plots/variant-share-latest.png)
 
+Latest estimate variant proportion
+
+![Variant share by country](plots/variant-share-bar.png)
+
 ### In tabular form, per country
 
 {var_prop_tab}

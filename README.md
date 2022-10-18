@@ -4,7 +4,7 @@ This repository uses the `genomicsurveillance` model to estimate daily growth ra
 
 It pulls data from `cov-spectrum.org` on a daily basis.
 
-Latest update: 2022-10-17.
+Latest update: 2022-10-18.
 
 ## Growth rates
 ![Growth rates](plots/growth-rate-latest.png)
@@ -537,6 +537,10 @@ Shown is the daily growth advantage over BA.5 in percent. Errors are standard er
 
 ![Variant share by country](plots/variant-share-latest.png)
 
+Latest estimate variant proportion
+
+![Variant share by country](plots/variant-share-bar.png)
+
 ### In tabular form, per country
 
 <table border="1" class="dataframe">
@@ -1059,6 +1063,6 @@ Shown is the daily growth advantage over BA.5 in percent. Errors are standard er
   </tbody>
 </table>
 
-Shown is the estimated variant proportion on 2022-10-17 in percent. 
+Shown is the estimated variant proportion on 2022-10-18 in percent. 
 
 Values in parentheses mean that the variant has not been detected in the specific country and are imputed instead.
