@@ -11,7 +11,7 @@ Latest update: {date}.
 
 ### In tabular form, per country
 
-<small><pre>{growth_rate_tab}</pre></small>
+<small>{growth_rate_tab}</small>
 
 Shown is the daily growth advantage over {baseline} in percent. Errors are standard errors.
 
@@ -25,7 +25,7 @@ Latest estimate variant proportion
 
 ### In tabular form, per country
 
-<small><pre>{var_prop_tab}</pre></small>
+<small>{var_prop_tab}</small>
 
 Shown is the estimated variant proportion on {date} in percent. 
 

@@ -11,7 +11,7 @@ Latest update: 2022-10-18.
 
 ### In tabular form, per country
 
-<small><pre><table border="1" class="dataframe">
+<small><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>country</th>
@@ -529,7 +529,7 @@ Latest update: 2022-10-18.
       <td>6±2</td>
     </tr>
   </tbody>
-</table></pre></small>
+</table></small>
 
 Shown is the daily growth advantage over BA.5 in percent. Errors are standard errors.
 
@@ -543,7 +543,7 @@ Latest estimate variant proportion
 
 ### In tabular form, per country
 
-<small><pre><table border="1" class="dataframe">
+<small><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>country</th>
@@ -1061,7 +1061,7 @@ Latest estimate variant proportion
       <td>0.2</td>
     </tr>
   </tbody>
-</table></pre></small>
+</table></small>
 
 Shown is the estimated variant proportion on 2022-10-18 in percent. 
 
