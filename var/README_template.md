@@ -2,7 +2,7 @@
 
 This repository uses the `genomicsurveillance` model to estimate daily growth rates of a variety of SARS-CoV-2 lineages in selected countries. It fits a logistic linear model to daily lineage counts using a Dirichlet-Multinomial model. The growth rates are modelled in a hierarchical Bayesian fashion using stochastic variational inference.
 
-It pulls aggregated data from `cov-spectrum.org`; the underlying data is proved bu GISAID.
+It pulls aggregated data from `cov-spectrum.org`; the underlying data is proved by GISAID. Case data is from Our World in Data.
 
 Latest update: {date}.
 
