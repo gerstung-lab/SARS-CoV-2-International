@@ -1,10 +1,12 @@
 # International SARS-CoV-2 genomic surveillance
 
-This repository uses the `genomicsurveillance` model to estimate daily growth rates of a variety of SARS-CoV-2 lineages in selected countries. It fits a logistic linear model to daily lineage counts using a Dirichlet-Multinomial model. The growth rates are modelled in a hierarchical Bayesian fashion using stochastic variational inference.
+This repository uses the `genomicsurveillance` model to estimate daily growth rates of a variety of SARS-CoV-2 lineages in selected countries. It fits a logistic linear model to daily lineage counts using a Dirichlet-Multinomial model. The growth rates are modelled in a hierarchical Bayesian fashion using stochastic variational inference. 
 
-It pulls aggregated data from `cov-spectrum.org`; the underlying data is proved by GISAID. Case data is from Our World in Data.
+The model is described in detail in our publication [Genomic reconstruction of the SARS-CoV-2 epidemic in England](https://www.nature.com/articles/s41586-021-04069-y).
 
-Latest update: 2022-10-22.
+The current code pulls aggregated data from `cov-spectrum.org`; the underlying data is proved by GISAID. Case data is from Our World in Data.
+
+Latest update: 2022-10-23.
 
 ## Growth rates
 ![Growth rates](plots/growth-rate-latest.png)
@@ -13,10 +15,12 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
 
 ### In tabular form, per country
 
+Other countries are grouped into geographic regions.
+
 <small><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>country</th>
+      <th></th>
       <th>Australia</th>
       <th>Belgium</th>
       <th>Brazil</th>
@@ -33,74 +37,98 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <th>Spain</th>
       <th>USA</th>
       <th>United Kingdom</th>
+      <th>Other - Africa</th>
+      <th>Other - Asia</th>
+      <th>Other - Europe</th>
+      <th>Other - North America</th>
+      <th>Other - Oceania</th>
+      <th>Other - South America</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>B.1.1.529</th>
       <td>-10±0</td>
-      <td>-18±0</td>
-      <td>-14±1</td>
-      <td>-15±1</td>
+      <td>-17±0</td>
+      <td>-13±1</td>
+      <td>-14±0</td>
       <td>-11±0</td>
       <td>-15±0</td>
       <td>-3±0</td>
-      <td>-18±0</td>
+      <td>-17±0</td>
       <td>-18±2</td>
       <td>-18±3</td>
-      <td>-13±1</td>
+      <td>-13±0</td>
       <td>&lt;NA&gt;</td>
       <td>-13±0</td>
-      <td>-14±0</td>
-      <td>-14±0</td>
+      <td>-16±0</td>
+      <td>-13±0</td>
       <td>-17±0</td>
+      <td>-9±0</td>
+      <td>-9±0</td>
+      <td>-15±0</td>
+      <td>-16±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>-12±0</td>
     </tr>
     <tr>
       <th>BA.1</th>
       <td>-19±0</td>
-      <td>-21±0</td>
+      <td>-20±0</td>
       <td>-19±0</td>
-      <td>-22±0</td>
+      <td>-21±0</td>
       <td>-18±0</td>
       <td>-21±0</td>
       <td>-14±0</td>
       <td>-22±0</td>
       <td>-21±0</td>
       <td>-19±0</td>
-      <td>-26±0</td>
+      <td>-25±0</td>
       <td>-16±0</td>
       <td>-15±0</td>
       <td>-20±0</td>
       <td>-21±0</td>
-      <td>-22±0</td>
+      <td>-21±0</td>
+      <td>-16±0</td>
+      <td>-14±0</td>
+      <td>-19±0</td>
+      <td>-20±0</td>
+      <td>-9±0</td>
+      <td>-18±0</td>
     </tr>
     <tr>
       <th>BA.1.1</th>
       <td>-17±0</td>
-      <td>-18±0</td>
-      <td>-18±0</td>
+      <td>-17±0</td>
+      <td>-17±0</td>
       <td>-16±0</td>
       <td>-16±0</td>
       <td>-18±0</td>
+      <td>-12±0</td>
+      <td>-19±0</td>
+      <td>-18±0</td>
+      <td>-17±0</td>
+      <td>-14±0</td>
+      <td>-8±0</td>
       <td>-13±0</td>
+      <td>-17±0</td>
       <td>-19±0</td>
       <td>-18±0</td>
-      <td>-17±0</td>
       <td>-14±0</td>
-      <td>-9±0</td>
-      <td>-14±0</td>
+      <td>-13±0</td>
+      <td>-16±0</td>
+      <td>-18±0</td>
+      <td>-14±1</td>
       <td>-17±0</td>
-      <td>-19±0</td>
-      <td>-19±0</td>
     </tr>
     <tr>
       <th>BA.2</th>
       <td>-9±0</td>
       <td>-11±0</td>
       <td>-11±0</td>
-      <td>-12±0</td>
+      <td>-11±0</td>
       <td>-8±0</td>
-      <td>-12±0</td>
+      <td>-11±0</td>
       <td>-4±0</td>
       <td>-11±0</td>
       <td>-10±0</td>
@@ -110,26 +138,38 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <td>-8±0</td>
       <td>-9±0</td>
       <td>-11±0</td>
+      <td>-11±0</td>
+      <td>-7±0</td>
+      <td>-8±0</td>
+      <td>-10±0</td>
+      <td>-12±0</td>
+      <td>-9±0</td>
       <td>-11±0</td>
     </tr>
     <tr>
       <th>BA.2.3.20</th>
-      <td>7±0</td>
-      <td>1±4</td>
+      <td>8±0</td>
+      <td>5±2</td>
       <td>&lt;NA&gt;</td>
-      <td>5±1</td>
-      <td>8±2</td>
+      <td>4±1</td>
+      <td>9±1</td>
       <td>10±2</td>
       <td>8±6</td>
       <td>7±1</td>
-      <td>8±1</td>
+      <td>9±1</td>
       <td>&lt;NA&gt;</td>
-      <td>2±2</td>
-      <td>10±1</td>
+      <td>2±1</td>
+      <td>10±0</td>
       <td>&lt;NA&gt;</td>
-      <td>&lt;NA&gt;</td>
-      <td>7±1</td>
+      <td>5±4</td>
+      <td>8±0</td>
       <td>5±2</td>
+      <td>&lt;NA&gt;</td>
+      <td>11±1</td>
+      <td>12±0</td>
+      <td>5±1</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
     </tr>
     <tr>
       <th>BA.2.12.1</th>
@@ -149,11 +189,17 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <td>-4±0</td>
       <td>-7±0</td>
       <td>-5±0</td>
+      <td>-6±0</td>
+      <td>-5±0</td>
+      <td>-4±0</td>
+      <td>-8±0</td>
+      <td>-9±2</td>
+      <td>-7±0</td>
     </tr>
     <tr>
       <th>BA.2.75</th>
       <td>4±0</td>
-      <td>6±0</td>
+      <td>5±0</td>
       <td>&lt;NA&gt;</td>
       <td>5±0</td>
       <td>6±0</td>
@@ -161,13 +207,19 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <td>4±0</td>
       <td>5±0</td>
       <td>3±0</td>
-      <td>4±3</td>
+      <td>3±3</td>
       <td>3±0</td>
       <td>6±0</td>
-      <td>-2±1</td>
+      <td>1±1</td>
       <td>8±0</td>
       <td>4±0</td>
       <td>5±0</td>
+      <td>-2±3</td>
+      <td>4±0</td>
+      <td>8±0</td>
+      <td>2±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>2±1</td>
     </tr>
     <tr>
       <th>BA.2.75.1</th>
@@ -176,26 +228,32 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <td>&lt;NA&gt;</td>
       <td>2±0</td>
       <td>3±0</td>
-      <td>6±0</td>
+      <td>5±0</td>
       <td>5±0</td>
       <td>3±0</td>
       <td>0±0</td>
       <td>&lt;NA&gt;</td>
       <td>1±0</td>
-      <td>5±0</td>
-      <td>-5±7</td>
-      <td>3±1</td>
+      <td>4±0</td>
+      <td>-4±6</td>
+      <td>2±1</td>
       <td>2±0</td>
       <td>2±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>3±0</td>
+      <td>3±0</td>
+      <td>2±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>6±2</td>
     </tr>
     <tr>
       <th>BA.2.75.2</th>
       <td>4±0</td>
       <td>3±0</td>
       <td>&lt;NA&gt;</td>
-      <td>4±0</td>
-      <td>5±1</td>
-      <td>5±1</td>
+      <td>3±0</td>
+      <td>4±1</td>
+      <td>5±0</td>
       <td>8±0</td>
       <td>2±1</td>
       <td>3±0</td>
@@ -203,47 +261,65 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <td>3±0</td>
       <td>6±0</td>
       <td>&lt;NA&gt;</td>
-      <td>6±2</td>
+      <td>4±2</td>
+      <td>3±0</td>
+      <td>3±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>6±0</td>
       <td>4±0</td>
-      <td>4±0</td>
+      <td>1±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>1±2</td>
     </tr>
     <tr>
       <th>BA.2.75.4</th>
-      <td>1±1</td>
+      <td>0±1</td>
       <td>1±1</td>
       <td>&lt;NA&gt;</td>
       <td>2±1</td>
-      <td>5±2</td>
-      <td>1±9</td>
+      <td>4±2</td>
+      <td>-1±9</td>
       <td>7±0</td>
-      <td>1±8</td>
-      <td>-2±3</td>
+      <td>0±7</td>
+      <td>-3±3</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>6±1</td>
+      <td>5±1</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>2±1</td>
       <td>2±1</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>6±0</td>
+      <td>-4±3</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
     </tr>
     <tr>
       <th>BN.1</th>
-      <td>6±1</td>
-      <td>7±2</td>
+      <td>5±1</td>
+      <td>6±2</td>
       <td>&lt;NA&gt;</td>
       <td>3±1</td>
-      <td>8±2</td>
+      <td>7±3</td>
       <td>6±1</td>
-      <td>10±0</td>
-      <td>6±1</td>
+      <td>9±0</td>
+      <td>5±1</td>
       <td>7±1</td>
       <td>&lt;NA&gt;</td>
-      <td>1±2</td>
+      <td>0±3</td>
       <td>9±1</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>6±1</td>
       <td>5±1</td>
+      <td>5±1</td>
+      <td>&lt;NA&gt;</td>
+      <td>9±1</td>
+      <td>8±1</td>
+      <td>-1±3</td>
+      <td>&lt;NA&gt;</td>
+      <td>3±5</td>
     </tr>
     <tr>
       <th>BA.4</th>
@@ -258,33 +334,51 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <td>-4±0</td>
       <td>-2±0</td>
       <td>-3±0</td>
-      <td>-2±0</td>
+      <td>-1±0</td>
       <td>-2±0</td>
       <td>-1±0</td>
       <td>-2±0</td>
+      <td>-2±0</td>
+      <td>-3±0</td>
+      <td>-2±0</td>
+      <td>-2±0</td>
+      <td>-2±0</td>
+      <td>-8±7</td>
       <td>-2±0</td>
     </tr>
     <tr>
       <th>BA.4.6</th>
       <td>2±0</td>
-      <td>4±0</td>
-      <td>3±0</td>
-      <td>2±0</td>
-      <td>3±0</td>
-      <td>3±0</td>
       <td>3±0</td>
       <td>3±0</td>
       <td>2±0</td>
       <td>3±0</td>
+      <td>3±0</td>
+      <td>3±0</td>
+      <td>3±0</td>
+      <td>1±0</td>
+      <td>2±0</td>
       <td>2±0</td>
       <td>2±0</td>
       <td>0±0</td>
       <td>4±0</td>
       <td>2±0</td>
       <td>2±0</td>
+      <td>-1±0</td>
+      <td>2±0</td>
+      <td>3±0</td>
+      <td>2±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>2±0</td>
     </tr>
     <tr>
       <th>BA.5</th>
+      <td>0±0</td>
+      <td>0±0</td>
+      <td>0±0</td>
+      <td>0±0</td>
+      <td>0±0</td>
+      <td>0±0</td>
       <td>0±0</td>
       <td>0±0</td>
       <td>0±0</td>
@@ -320,63 +414,87 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <td>1±0</td>
       <td>1±0</td>
       <td>1±0</td>
+      <td>0±0</td>
+      <td>1±0</td>
+      <td>2±0</td>
+      <td>1±0</td>
+      <td>9±0</td>
+      <td>1±0</td>
     </tr>
     <tr>
       <th>BF.7</th>
       <td>6±0</td>
-      <td>3±0</td>
-      <td>5±1</td>
+      <td>2±0</td>
+      <td>4±1</td>
       <td>5±0</td>
       <td>5±0</td>
       <td>5±0</td>
-      <td>-1±3</td>
+      <td>-3±4</td>
       <td>5±0</td>
-      <td>4±0</td>
+      <td>5±0</td>
       <td>4±1</td>
       <td>4±0</td>
       <td>9±1</td>
-      <td>-7±3</td>
+      <td>-1±1</td>
       <td>6±0</td>
       <td>5±0</td>
       <td>5±0</td>
+      <td>8±1</td>
+      <td>8±0</td>
+      <td>5±0</td>
+      <td>5±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>3±0</td>
     </tr>
     <tr>
       <th>BF.11</th>
       <td>5±0</td>
       <td>5±0</td>
       <td>&lt;NA&gt;</td>
-      <td>4±0</td>
+      <td>5±0</td>
       <td>6±0</td>
       <td>4±0</td>
       <td>&lt;NA&gt;</td>
       <td>3±0</td>
-      <td>4±1</td>
-      <td>0±7</td>
-      <td>-1±4</td>
-      <td>8±2</td>
+      <td>5±1</td>
+      <td>-1±6</td>
+      <td>-1±3</td>
+      <td>7±2</td>
       <td>&lt;NA&gt;</td>
       <td>4±0</td>
       <td>4±0</td>
       <td>3±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>7±1</td>
+      <td>5±0</td>
+      <td>5±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
     </tr>
     <tr>
       <th>BF.14</th>
-      <td>-1±4</td>
+      <td>2±3</td>
       <td>4±0</td>
       <td>-1±4</td>
       <td>6±0</td>
-      <td>7±0</td>
-      <td>7±0</td>
+      <td>6±0</td>
+      <td>8±0</td>
       <td>6±2</td>
-      <td>-1±1</td>
-      <td>0±9</td>
-      <td>1±3</td>
+      <td>-1±2</td>
+      <td>0±7</td>
+      <td>0±3</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>0±4</td>
-      <td>3±2</td>
+      <td>2±2</td>
       <td>5±0</td>
       <td>6±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>9±8</td>
+      <td>4±0</td>
+      <td>2±1</td>
+      <td>&lt;NA&gt;</td>
+      <td>2±4</td>
     </tr>
     <tr>
       <th>BA.5.2.6</th>
@@ -384,25 +502,31 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <td>5±0</td>
       <td>&lt;NA&gt;</td>
       <td>5±0</td>
-      <td>6±0</td>
-      <td>6±0</td>
-      <td>4±0</td>
-      <td>6±0</td>
       <td>5±0</td>
-      <td>0±4</td>
       <td>6±0</td>
-      <td>8±0</td>
       <td>2±0</td>
-      <td>10±1</td>
+      <td>5±0</td>
+      <td>5±0</td>
+      <td>-3±4</td>
+      <td>6±1</td>
+      <td>7±0</td>
+      <td>2±0</td>
+      <td>9±1</td>
       <td>4±0</td>
       <td>5±0</td>
+      <td>4±1</td>
+      <td>5±0</td>
+      <td>5±0</td>
+      <td>4±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
     </tr>
     <tr>
       <th>BA.5.2.13</th>
-      <td>5±1</td>
+      <td>6±1</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>5±0</td>
+      <td>6±0</td>
       <td>8±1</td>
       <td>4±1</td>
       <td>&lt;NA&gt;</td>
@@ -410,106 +534,142 @@ Each dot represents a country (MAP estimate). Bars denote the shared mean, error
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>10±13</td>
-      <td>&lt;NA&gt;</td>
+      <td>10±11</td>
+      <td>5±9</td>
       <td>5±2</td>
       <td>5±0</td>
       <td>5±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>9±1</td>
+      <td>6±0</td>
+      <td>6±1</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
     </tr>
     <tr>
       <th>BQ.1</th>
-      <td>10±1</td>
+      <td>9±1</td>
       <td>9±0</td>
-      <td>-3±5</td>
+      <td>-5±5</td>
       <td>9±0</td>
       <td>9±0</td>
       <td>11±1</td>
-      <td>12±8</td>
+      <td>3±8</td>
       <td>9±1</td>
-      <td>10±1</td>
-      <td>-3±7</td>
+      <td>9±1</td>
+      <td>-3±8</td>
       <td>4±1</td>
-      <td>10±5</td>
-      <td>5±2</td>
-      <td>13±1</td>
+      <td>11±5</td>
+      <td>10±1</td>
+      <td>12±0</td>
       <td>9±0</td>
       <td>9±0</td>
+      <td>8±0</td>
+      <td>8±1</td>
+      <td>10±0</td>
+      <td>9±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>-2±5</td>
     </tr>
     <tr>
       <th>BQ.1.1</th>
-      <td>12±0</td>
-      <td>9±0</td>
-      <td>&lt;NA&gt;</td>
       <td>11±0</td>
-      <td>11±0</td>
-      <td>14±1</td>
+      <td>10±0</td>
       <td>&lt;NA&gt;</td>
-      <td>11±1</td>
+      <td>10±0</td>
+      <td>11±0</td>
       <td>13±1</td>
       <td>&lt;NA&gt;</td>
+      <td>10±1</td>
+      <td>12±1</td>
       <td>&lt;NA&gt;</td>
-      <td>20±10</td>
-      <td>3±3</td>
-      <td>16±1</td>
+      <td>&lt;NA&gt;</td>
+      <td>21±9</td>
+      <td>6±1</td>
+      <td>14±1</td>
       <td>11±0</td>
-      <td>11±0</td>
+      <td>10±0</td>
+      <td>17±0</td>
+      <td>19±1</td>
+      <td>13±0</td>
+      <td>10±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
     </tr>
     <tr>
       <th>BQ.1.2</th>
-      <td>5±12</td>
-      <td>10±3</td>
+      <td>5±10</td>
+      <td>9±3</td>
       <td>&lt;NA&gt;</td>
       <td>8±1</td>
-      <td>12±3</td>
+      <td>11±3</td>
       <td>9±1</td>
       <td>&lt;NA&gt;</td>
       <td>4±2</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>14±7</td>
+      <td>11±7</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>9±1</td>
       <td>8±1</td>
+      <td>14±1</td>
+      <td>&lt;NA&gt;</td>
+      <td>12±1</td>
+      <td>3±1</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
     </tr>
     <tr>
       <th>XBB</th>
-      <td>5±1</td>
-      <td>6±6</td>
+      <td>6±1</td>
+      <td>6±5</td>
       <td>&lt;NA&gt;</td>
-      <td>1±3</td>
-      <td>11±4</td>
-      <td>5±3</td>
-      <td>12±1</td>
-      <td>2±2</td>
       <td>5±2</td>
+      <td>9±4</td>
+      <td>4±4</td>
+      <td>12±0</td>
+      <td>2±2</td>
+      <td>7±2</td>
       <td>&lt;NA&gt;</td>
-      <td>4±2</td>
+      <td>3±3</td>
       <td>14±1</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>5±1</td>
-      <td>0±3</td>
+      <td>4±2</td>
+      <td>&lt;NA&gt;</td>
+      <td>14±3</td>
+      <td>9±1</td>
+      <td>5±1</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
     </tr>
     <tr>
       <th>XBB.1</th>
-      <td>9±2</td>
-      <td>9±2</td>
+      <td>10±2</td>
+      <td>7±2</td>
       <td>&lt;NA&gt;</td>
-      <td>4±3</td>
-      <td>13±9</td>
-      <td>6±7</td>
-      <td>11±3</td>
-      <td>8±5</td>
-      <td>5±6</td>
-      <td>&lt;NA&gt;</td>
+      <td>4±2</td>
+      <td>12±7</td>
+      <td>8±7</td>
+      <td>15±2</td>
+      <td>9±4</td>
       <td>5±5</td>
-      <td>18±0</td>
+      <td>&lt;NA&gt;</td>
+      <td>6±5</td>
+      <td>19±0</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>9±2</td>
-      <td>3±2</td>
+      <td>10±1</td>
+      <td>5±2</td>
+      <td>&lt;NA&gt;</td>
+      <td>19±0</td>
+      <td>14±2</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
     </tr>
   </tbody>
 </table></small>
@@ -531,7 +691,7 @@ Latest estimated variant proportion.
 <small><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>country</th>
+      <th></th>
       <th>Australia</th>
       <th>Belgium</th>
       <th>Brazil</th>
@@ -548,6 +708,12 @@ Latest estimated variant proportion.
       <th>Spain</th>
       <th>USA</th>
       <th>United Kingdom</th>
+      <th>Other - Africa</th>
+      <th>Other - Asia</th>
+      <th>Other - Europe</th>
+      <th>Other - North America</th>
+      <th>Other - Oceania</th>
+      <th>Other - South America</th>
     </tr>
   </thead>
   <tbody>
@@ -569,9 +735,21 @@ Latest estimated variant proportion.
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>(0.0)</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>BA.1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -607,6 +785,12 @@ Latest estimated variant proportion.
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>BA.2</th>
@@ -626,25 +810,37 @@ Latest estimated variant proportion.
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>BA.2.3.20</th>
-      <td>4.0</td>
-      <td>0.3</td>
+      <td>6.6</td>
+      <td>0.5</td>
       <td>(0.0)</td>
       <td>0.8</td>
-      <td>0.3</td>
-      <td>0.6</td>
+      <td>0.4</td>
       <td>1.1</td>
-      <td>1.6</td>
-      <td>1.3</td>
+      <td>1.2</td>
+      <td>2.3</td>
+      <td>2.2</td>
       <td>(0.0)</td>
-      <td>1.3</td>
-      <td>2.8</td>
+      <td>1.4</td>
+      <td>2.6</td>
       <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.8</td>
+      <td>0.4</td>
+      <td>1.2</td>
       <td>0.2</td>
+      <td>(0.0)</td>
+      <td>3.8</td>
+      <td>3.2</td>
+      <td>0.8</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
     </tr>
     <tr>
       <th>BA.2.12.1</th>
@@ -664,25 +860,37 @@ Latest estimated variant proportion.
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>BA.2.75</th>
-      <td>9.2</td>
+      <td>8.8</td>
       <td>2.6</td>
       <td>(0.0)</td>
-      <td>1.3</td>
-      <td>1.3</td>
+      <td>1.4</td>
+      <td>1.2</td>
       <td>0.8</td>
-      <td>30.2</td>
+      <td>21.6</td>
       <td>3.5</td>
-      <td>0.8</td>
-      <td>1.8</td>
-      <td>6.1</td>
-      <td>7.6</td>
       <td>0.7</td>
-      <td>2.6</td>
-      <td>2.0</td>
-      <td>3.5</td>
+      <td>0.9</td>
+      <td>5.9</td>
+      <td>4.0</td>
+      <td>1.2</td>
+      <td>3.2</td>
+      <td>2.1</td>
+      <td>3.6</td>
+      <td>0.0</td>
+      <td>3.1</td>
+      <td>5.6</td>
+      <td>1.3</td>
+      <td>(0.0)</td>
+      <td>0.3</td>
     </tr>
     <tr>
       <th>BA.2.75.1</th>
@@ -692,343 +900,451 @@ Latest estimated variant proportion.
       <td>0.3</td>
       <td>0.1</td>
       <td>0.5</td>
-      <td>11.3</td>
+      <td>9.8</td>
       <td>0.6</td>
       <td>0.0</td>
       <td>(0.0)</td>
       <td>0.7</td>
-      <td>2.2</td>
+      <td>1.4</td>
+      <td>0.3</td>
+      <td>0.2</td>
+      <td>0.2</td>
+      <td>0.3</td>
+      <td>(0.0)</td>
       <td>0.5</td>
       <td>0.3</td>
       <td>0.2</td>
-      <td>0.3</td>
+      <td>(0.0)</td>
+      <td>1.2</td>
     </tr>
     <tr>
       <th>BA.2.75.2</th>
-      <td>2.7</td>
-      <td>0.4</td>
-      <td>(0.0)</td>
-      <td>0.5</td>
-      <td>0.2</td>
+      <td>2.4</td>
       <td>0.3</td>
-      <td>18.7</td>
-      <td>0.7</td>
+      <td>(0.0)</td>
+      <td>0.4</td>
+      <td>0.2</td>
+      <td>0.4</td>
+      <td>17.5</td>
+      <td>0.6</td>
       <td>0.2</td>
       <td>(0.0)</td>
-      <td>2.9</td>
-      <td>2.1</td>
+      <td>2.6</td>
+      <td>1.0</td>
       <td>(0.0)</td>
-      <td>0.5</td>
+      <td>0.2</td>
       <td>0.4</td>
+      <td>0.6</td>
+      <td>(0.0)</td>
       <td>0.7</td>
+      <td>0.4</td>
+      <td>0.2</td>
+      <td>(0.0)</td>
+      <td>0.2</td>
     </tr>
     <tr>
       <th>BA.2.75.4</th>
-      <td>0.3</td>
+      <td>0.2</td>
       <td>0.1</td>
       <td>(0.0)</td>
       <td>0.0</td>
       <td>0.1</td>
       <td>0.1</td>
-      <td>1.5</td>
-      <td>0.3</td>
+      <td>1.3</td>
+      <td>0.2</td>
       <td>0.0</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>0.1</td>
+      <td>0.0</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>0.2</td>
+      <td>0.0</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
     </tr>
     <tr>
       <th>BN.1</th>
-      <td>1.7</td>
+      <td>1.4</td>
       <td>0.4</td>
       <td>(0.0)</td>
-      <td>0.6</td>
-      <td>0.1</td>
+      <td>0.4</td>
+      <td>0.2</td>
       <td>0.3</td>
-      <td>10.2</td>
+      <td>8.3</td>
       <td>1.4</td>
-      <td>0.5</td>
+      <td>0.6</td>
       <td>(0.0)</td>
       <td>0.3</td>
-      <td>2.2</td>
+      <td>1.1</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>0.2</td>
       <td>0.7</td>
+      <td>(0.0)</td>
+      <td>1.0</td>
+      <td>0.6</td>
+      <td>0.0</td>
+      <td>(0.0)</td>
+      <td>0.9</td>
     </tr>
     <tr>
       <th>BA.4</th>
-      <td>0.5</td>
-      <td>0.1</td>
-      <td>1.8</td>
-      <td>0.2</td>
-      <td>0.3</td>
-      <td>0.2</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>0.0</td>
-      <td>1.4</td>
-      <td>0.6</td>
-      <td>0.0</td>
-      <td>4.9</td>
-      <td>0.3</td>
-      <td>0.5</td>
       <td>0.4</td>
+      <td>0.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>0.2</td>
+      <td>0.2</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>1.3</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>4.2</td>
+      <td>0.3</td>
+      <td>0.4</td>
+      <td>0.4</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.2</td>
+      <td>0.3</td>
+      <td>0.0</td>
+      <td>1.9</td>
     </tr>
     <tr>
       <th>BA.4.6</th>
-      <td>5.7</td>
-      <td>4.5</td>
-      <td>12.6</td>
-      <td>2.9</td>
-      <td>3.7</td>
-      <td>2.5</td>
-      <td>0.1</td>
-      <td>2.7</td>
-      <td>0.3</td>
-      <td>3.5</td>
-      <td>6.8</td>
-      <td>0.1</td>
-      <td>7.1</td>
-      <td>7.1</td>
-      <td>12.0</td>
       <td>5.0</td>
+      <td>4.0</td>
+      <td>11.6</td>
+      <td>2.6</td>
+      <td>3.4</td>
+      <td>2.3</td>
+      <td>0.0</td>
+      <td>2.2</td>
+      <td>0.2</td>
+      <td>3.2</td>
+      <td>6.8</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>10.9</td>
+      <td>4.5</td>
+      <td>0.0</td>
+      <td>0.3</td>
+      <td>2.1</td>
+      <td>9.9</td>
+      <td>(0.0)</td>
+      <td>28.7</td>
     </tr>
     <tr>
       <th>BA.5</th>
-      <td>10.6</td>
-      <td>11.6</td>
+      <td>10.0</td>
+      <td>10.9</td>
+      <td>17.2</td>
+      <td>13.9</td>
+      <td>7.9</td>
       <td>14.5</td>
-      <td>15.3</td>
-      <td>9.1</td>
-      <td>16.6</td>
       <td>0.0</td>
-      <td>10.2</td>
-      <td>5.1</td>
-      <td>40.9</td>
-      <td>20.4</td>
-      <td>0.3</td>
-      <td>48.5</td>
-      <td>19.2</td>
-      <td>15.7</td>
-      <td>11.6</td>
+      <td>9.5</td>
+      <td>4.7</td>
+      <td>39.8</td>
+      <td>19.8</td>
+      <td>0.2</td>
+      <td>42.8</td>
+      <td>16.7</td>
+      <td>14.7</td>
+      <td>10.8</td>
+      <td>0.1</td>
+      <td>1.8</td>
+      <td>11.5</td>
+      <td>14.9</td>
+      <td>0.0</td>
+      <td>24.2</td>
     </tr>
     <tr>
       <th>BA.5.2</th>
-      <td>38.0</td>
+      <td>37.2</td>
       <td>18.6</td>
-      <td>59.4</td>
-      <td>32.1</td>
-      <td>14.3</td>
-      <td>34.4</td>
-      <td>0.8</td>
-      <td>41.6</td>
-      <td>83.5</td>
-      <td>47.3</td>
-      <td>48.8</td>
-      <td>4.0</td>
-      <td>20.0</td>
-      <td>20.7</td>
-      <td>36.0</td>
+      <td>62.1</td>
+      <td>31.8</td>
+      <td>13.9</td>
+      <td>34.5</td>
+      <td>0.6</td>
+      <td>41.3</td>
+      <td>83.1</td>
+      <td>50.6</td>
+      <td>49.8</td>
+      <td>2.1</td>
+      <td>17.0</td>
+      <td>19.9</td>
+      <td>36.8</td>
       <td>21.4</td>
+      <td>0.1</td>
+      <td>30.1</td>
+      <td>33.7</td>
+      <td>46.4</td>
+      <td>99.0</td>
+      <td>39.1</td>
     </tr>
     <tr>
       <th>BF.7</th>
-      <td>3.2</td>
-      <td>26.3</td>
-      <td>3.5</td>
-      <td>22.6</td>
-      <td>10.6</td>
-      <td>18.0</td>
+      <td>3.7</td>
+      <td>26.5</td>
+      <td>3.3</td>
+      <td>25.3</td>
+      <td>10.9</td>
+      <td>20.1</td>
       <td>0.0</td>
-      <td>8.7</td>
-      <td>1.2</td>
+      <td>9.9</td>
       <td>1.4</td>
-      <td>2.4</td>
-      <td>0.4</td>
-      <td>0.0</td>
-      <td>13.1</td>
-      <td>5.2</td>
-      <td>8.4</td>
+      <td>1.3</td>
+      <td>2.7</td>
+      <td>0.3</td>
+      <td>0.3</td>
+      <td>12.7</td>
+      <td>5.9</td>
+      <td>9.3</td>
+      <td>0.7</td>
+      <td>1.2</td>
+      <td>15.4</td>
+      <td>8.6</td>
+      <td>(0.2)</td>
+      <td>2.1</td>
     </tr>
     <tr>
       <th>BF.11</th>
-      <td>1.0</td>
-      <td>0.6</td>
+      <td>1.3</td>
+      <td>0.7</td>
+      <td>(0.0)</td>
+      <td>1.1</td>
+      <td>0.8</td>
+      <td>1.1</td>
+      <td>(0.0)</td>
+      <td>0.5</td>
+      <td>0.1</td>
+      <td>0.8</td>
+      <td>0.3</td>
+      <td>0.0</td>
       <td>(0.0)</td>
       <td>0.8</td>
-      <td>0.7</td>
-      <td>1.0</td>
+      <td>1.2</td>
+      <td>3.5</td>
       <td>(0.0)</td>
-      <td>0.4</td>
-      <td>0.1</td>
+      <td>0.2</td>
+      <td>1.0</td>
       <td>1.1</td>
-      <td>0.3</td>
-      <td>0.1</td>
       <td>(0.0)</td>
-      <td>0.9</td>
-      <td>1.0</td>
-      <td>3.3</td>
+      <td>(0.0)</td>
     </tr>
     <tr>
       <th>BF.14</th>
-      <td>0.0</td>
-      <td>0.4</td>
-      <td>1.2</td>
-      <td>1.1</td>
-      <td>0.5</td>
-      <td>1.9</td>
       <td>0.1</td>
+      <td>0.4</td>
+      <td>0.7</td>
+      <td>1.2</td>
+      <td>0.4</td>
+      <td>2.4</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.1</td>
+      <td>0.4</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>0.8</td>
       <td>0.3</td>
+      <td>0.3</td>
+      <td>0.7</td>
       <td>(0.0)</td>
+      <td>0.3</td>
+      <td>1.8</td>
+      <td>0.0</td>
       <td>(0.0)</td>
-      <td>0.5</td>
-      <td>0.6</td>
-      <td>0.2</td>
-      <td>0.6</td>
+      <td>0.7</td>
     </tr>
     <tr>
       <th>BA.5.2.6</th>
-      <td>3.8</td>
-      <td>1.8</td>
-      <td>(0.0)</td>
-      <td>2.3</td>
-      <td>1.5</td>
-      <td>2.4</td>
-      <td>0.2</td>
       <td>3.4</td>
+      <td>1.6</td>
+      <td>(0.0)</td>
+      <td>2.2</td>
       <td>1.3</td>
-      <td>0.8</td>
-      <td>3.8</td>
+      <td>2.1</td>
+      <td>0.0</td>
+      <td>3.1</td>
+      <td>1.3</td>
+      <td>0.5</td>
+      <td>3.2</td>
+      <td>0.9</td>
+      <td>3.6</td>
+      <td>3.3</td>
       <td>1.7</td>
-      <td>4.6</td>
-      <td>4.5</td>
-      <td>1.7</td>
-      <td>5.3</td>
+      <td>5.1</td>
+      <td>0.1</td>
+      <td>5.5</td>
+      <td>2.2</td>
+      <td>0.7</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
     </tr>
     <tr>
       <th>BA.5.2.13</th>
-      <td>0.4</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.8</td>
-      <td>0.3</td>
-      <td>0.1</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.1</td>
-      <td>(0.0)</td>
       <td>0.6</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>1.0</td>
+      <td>0.3</td>
       <td>0.2</td>
-      <td>2.8</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>0.1</td>
+      <td>1.1</td>
+      <td>0.4</td>
+      <td>0.2</td>
+      <td>3.1</td>
+      <td>(0.0)</td>
+      <td>0.3</td>
+      <td>0.4</td>
+      <td>0.5</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
     </tr>
     <tr>
       <th>BQ.1</th>
-      <td>4.9</td>
-      <td>7.0</td>
-      <td>6.6</td>
+      <td>4.7</td>
+      <td>7.5</td>
+      <td>3.0</td>
+      <td>6.3</td>
+      <td>4.0</td>
       <td>6.5</td>
-      <td>4.3</td>
-      <td>5.8</td>
+      <td>1.4</td>
+      <td>4.6</td>
+      <td>0.8</td>
+      <td>0.8</td>
+      <td>2.8</td>
+      <td>0.2</td>
+      <td>10.4</td>
+      <td>13.8</td>
+      <td>9.8</td>
+      <td>11.5</td>
       <td>1.8</td>
-      <td>4.8</td>
-      <td>1.2</td>
-      <td>0.9</td>
-      <td>3.3</td>
+      <td>1.1</td>
+      <td>6.8</td>
+      <td>5.1</td>
+      <td>(0.1)</td>
       <td>0.3</td>
-      <td>3.7</td>
-      <td>10.6</td>
-      <td>9.9</td>
-      <td>11.2</td>
     </tr>
     <tr>
       <th>BQ.1.1</th>
-      <td>9.3</td>
-      <td>23.0</td>
-      <td>(0.4)</td>
-      <td>11.5</td>
-      <td>51.8</td>
-      <td>12.1</td>
+      <td>8.4</td>
+      <td>23.6</td>
+      <td>(0.3)</td>
+      <td>10.6</td>
+      <td>53.9</td>
+      <td>11.1</td>
       <td>(0.2)</td>
-      <td>17.3</td>
+      <td>17.5</td>
       <td>3.7</td>
-      <td>(0.4)</td>
+      <td>(0.3)</td>
       <td>(0.3)</td>
       <td>0.8</td>
-      <td>9.3</td>
-      <td>18.8</td>
-      <td>12.4</td>
-      <td>23.3</td>
+      <td>13.1</td>
+      <td>20.8</td>
+      <td>12.3</td>
+      <td>23.0</td>
+      <td>92.7</td>
+      <td>13.8</td>
+      <td>11.9</td>
+      <td>8.9</td>
+      <td>(0.3)</td>
+      <td>(0.3)</td>
     </tr>
     <tr>
       <th>BQ.1.2</th>
-      <td>0.3</td>
-      <td>0.9</td>
+      <td>0.2</td>
+      <td>0.8</td>
       <td>(0.0)</td>
       <td>0.2</td>
       <td>0.6</td>
+      <td>0.8</td>
+      <td>(0.0)</td>
       <td>0.9</td>
       <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>0.1</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>1.2</td>
+      <td>1.2</td>
+      <td>4.5</td>
+      <td>(0.0)</td>
       <td>1.1</td>
+      <td>0.7</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.2</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>1.1</td>
-      <td>1.1</td>
     </tr>
     <tr>
       <th>XBB</th>
-      <td>0.9</td>
+      <td>1.3</td>
+      <td>0.4</td>
+      <td>(0.0)</td>
+      <td>0.2</td>
+      <td>0.1</td>
+      <td>0.2</td>
+      <td>29.9</td>
+      <td>0.3</td>
+      <td>0.5</td>
+      <td>(0.0)</td>
+      <td>1.3</td>
+      <td>2.9</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>0.2</td>
+      <td>0.1</td>
+      <td>(0.0)</td>
+      <td>1.8</td>
+      <td>0.7</td>
       <td>0.2</td>
       <td>(0.0)</td>
-      <td>0.1</td>
-      <td>0.1</td>
-      <td>0.2</td>
-      <td>21.7</td>
-      <td>0.2</td>
-      <td>0.2</td>
       <td>(0.0)</td>
-      <td>0.8</td>
-      <td>3.1</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.1</td>
-      <td>0.1</td>
     </tr>
     <tr>
       <th>XBB.1</th>
-      <td>1.7</td>
+      <td>2.5</td>
       <td>1.0</td>
-      <td>(0.0)</td>
+      <td>(0.2)</td>
       <td>0.1</td>
       <td>0.2</td>
+      <td>1.0</td>
+      <td>8.1</td>
+      <td>1.3</td>
       <td>0.3</td>
-      <td>2.2</td>
-      <td>0.8</td>
-      <td>0.4</td>
-      <td>(0.0)</td>
-      <td>1.2</td>
-      <td>71.8</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.3</td>
+      <td>(0.2)</td>
+      <td>1.5</td>
+      <td>82.1</td>
+      <td>(0.1)</td>
+      <td>(0.1)</td>
+      <td>0.5</td>
       <td>0.1</td>
+      <td>(0.0)</td>
+      <td>34.6</td>
+      <td>0.9</td>
+      <td>(0.1)</td>
+      <td>(0.2)</td>
+      <td>(0.2)</td>
     </tr>
   </tbody>
 </table></small>
 
-Shown is the estimated variant proportion on 2022-10-22 in percent. 
+Shown is the estimated variant proportion on 2022-10-23 in percent. 
 
 Values in parentheses mean that the variant has not been detected in the specific country and are imputed instead.

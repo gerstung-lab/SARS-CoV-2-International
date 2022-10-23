@@ -1,8 +1,10 @@
 # International SARS-CoV-2 genomic surveillance
 
-This repository uses the `genomicsurveillance` model to estimate daily growth rates of a variety of SARS-CoV-2 lineages in selected countries. It fits a logistic linear model to daily lineage counts using a Dirichlet-Multinomial model. The growth rates are modelled in a hierarchical Bayesian fashion using stochastic variational inference.
+This repository uses the `genomicsurveillance` model to estimate daily growth rates of a variety of SARS-CoV-2 lineages in selected countries. It fits a logistic linear model to daily lineage counts using a Dirichlet-Multinomial model. The growth rates are modelled in a hierarchical Bayesian fashion using stochastic variational inference. 
 
-It pulls aggregated data from `cov-spectrum.org`; the underlying data is proved by GISAID. Case data is from Our World in Data.
+The model is described in detail in our publication [Genomic reconstruction of the SARS-CoV-2 epidemic in England](https://www.nature.com/articles/s41586-021-04069-y).
+
+The current code pulls aggregated data from `cov-spectrum.org`; the underlying data is proved by GISAID. Case data is from Our World in Data.
 
 Latest update: {date}.
 
@@ -12,6 +14,8 @@ Latest update: {date}.
 Each dot represents a country (MAP estimate). Bars denote the shared mean, errorbars are the 90% posterior interval.
 
 ### In tabular form, per country
+
+Other countries are grouped into geographic regions.
 
 <small>{growth_rate_tab}</small>
 
