@@ -1,6 +1,3 @@
-[submodule "genomicsurveillance"]
-	path = genomicsurveillance
-	url = https://github.com/gerstung-lab/genomicsurveillance
 [submodule "lib/genomicsurveillance"]
 	path = lib/genomicsurveillance
 	url = https://github.com/gerstung-lab/genomicsurveillance
