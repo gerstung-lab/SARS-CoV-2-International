@@ -6,7 +6,7 @@ The model is described in detail in our publication [Genomic reconstruction of t
 
 The current code pulls aggregated data from [cov-spectrum.org](cov-spectrum.org); the underlying data is proved by GISAID. Case data is from [Our World in Data](https://ourworldindata.org/explorers/coronavirus-data-explorer).
 
-Latest update: 2022-11-03, based on 7724645 genomic sequences.
+Latest update: 2022-11-07, based on 7750845 genomic sequences.
 
 ## Growth rates
 ![Growth rates](plots/growth-rate-latest.png)
@@ -56,14 +56,14 @@ Other countries are grouped into geographic regions.
       <th>B.1.1.529</th>
       <td>-11±1</td>
       <td>-14±1</td>
-      <td>-5±1</td>
+      <td>-4±1</td>
       <td>-3±1</td>
       <td>-6±3</td>
       <td>-8±1</td>
-      <td>-7±0</td>
+      <td>-7±1</td>
       <td>-6±0</td>
       <td>-4±0</td>
-      <td>-5±1</td>
+      <td>-6±1</td>
       <td>-3±1</td>
       <td>-4±1</td>
       <td>-9±1</td>
@@ -72,20 +72,20 @@ Other countries are grouped into geographic regions.
       <td>-14±0</td>
       <td>-19±1</td>
       <td>&lt;NA&gt;</td>
-      <td>-11±0</td>
+      <td>-11±1</td>
       <td>-5±1</td>
-      <td>-13±1</td>
+      <td>-12±1</td>
       <td>-4±1</td>
       <td>-9±0</td>
       <td>-2±2</td>
       <td>-3±1</td>
-      <td>-15±1</td>
+      <td>-14±1</td>
       <td>-4±0</td>
       <td>-13±0</td>
     </tr>
     <tr>
       <th>BA.1</th>
-      <td>-19±0</td>
+      <td>-18±0</td>
       <td>-21±0</td>
       <td>-21±0</td>
       <td>-18±0</td>
@@ -94,15 +94,15 @@ Other countries are grouped into geographic regions.
       <td>-17±0</td>
       <td>-20±0</td>
       <td>-12±0</td>
-      <td>-23±0</td>
+      <td>-21±0</td>
       <td>-21±0</td>
       <td>-18±0</td>
       <td>-23±0</td>
       <td>-15±0</td>
       <td>-12±0</td>
-      <td>-19±0</td>
+      <td>-18±0</td>
       <td>-20±0</td>
-      <td>-3±1</td>
+      <td>-4±1</td>
       <td>-18±0</td>
       <td>-22±0</td>
       <td>-17±0</td>
@@ -110,14 +110,14 @@ Other countries are grouped into geographic regions.
       <td>-15±0</td>
       <td>-20±0</td>
       <td>-19±0</td>
-      <td>-23±0</td>
+      <td>-22±0</td>
       <td>-20±0</td>
       <td>-23±0</td>
     </tr>
     <tr>
       <th>BA.1.1</th>
       <td>-17±0</td>
-      <td>-18±0</td>
+      <td>-17±0</td>
       <td>-18±0</td>
       <td>-16±0</td>
       <td>-21±0</td>
@@ -125,25 +125,25 @@ Other countries are grouped into geographic regions.
       <td>-15±0</td>
       <td>-17±0</td>
       <td>-11±0</td>
-      <td>-19±0</td>
-      <td>-18±0</td>
       <td>-17±0</td>
+      <td>-17±0</td>
+      <td>-16±0</td>
       <td>-14±0</td>
       <td>-14±0</td>
-      <td>-12±0</td>
+      <td>-11±0</td>
       <td>-16±0</td>
       <td>-18±0</td>
-      <td>-5±1</td>
+      <td>-6±1</td>
       <td>-17±0</td>
       <td>-21±0</td>
-      <td>-17±0</td>
+      <td>-16±0</td>
       <td>-8±0</td>
       <td>-13±0</td>
       <td>-16±0</td>
       <td>-17±0</td>
       <td>-17±0</td>
       <td>-18±0</td>
-      <td>-20±0</td>
+      <td>-19±0</td>
     </tr>
     <tr>
       <th>BA.2</th>
@@ -156,7 +156,7 @@ Other countries are grouped into geographic regions.
       <td>-7±0</td>
       <td>-11±0</td>
       <td>-3±0</td>
-      <td>-11±0</td>
+      <td>-10±0</td>
       <td>-10±0</td>
       <td>-10±0</td>
       <td>-9±0</td>
@@ -164,7 +164,7 @@ Other countries are grouped into geographic regions.
       <td>-7±0</td>
       <td>-10±0</td>
       <td>-11±0</td>
-      <td>-5±1</td>
+      <td>-6±1</td>
       <td>-10±0</td>
       <td>-13±0</td>
       <td>-12±0</td>
@@ -179,33 +179,33 @@ Other countries are grouped into geographic regions.
     <tr>
       <th>BA.2.3.20</th>
       <td>6±1</td>
-      <td>3±3</td>
+      <td>1±3</td>
       <td>4±1</td>
       <td>&lt;NA&gt;</td>
-      <td>-1±4</td>
-      <td>4±1</td>
+      <td>-3±5</td>
+      <td>3±1</td>
       <td>5±2</td>
       <td>8±1</td>
-      <td>8±4</td>
-      <td>6±1</td>
-      <td>9±1</td>
+      <td>6±5</td>
+      <td>5±1</td>
+      <td>8±1</td>
       <td>&lt;NA&gt;</td>
       <td>4±2</td>
-      <td>&lt;NA&gt;</td>
-      <td>6±1</td>
+      <td>14±5</td>
+      <td>7±1</td>
       <td>10±1</td>
       <td>&lt;NA&gt;</td>
-      <td>28±4</td>
+      <td>23±4</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>5±1</td>
       <td>&lt;NA&gt;</td>
-      <td>8±1</td>
-      <td>4±3</td>
-      <td>-7±4</td>
       <td>7±1</td>
-      <td>6±2</td>
+      <td>3±3</td>
+      <td>-9±5</td>
+      <td>7±1</td>
+      <td>6±1</td>
     </tr>
     <tr>
       <th>BA.2.12.1</th>
@@ -226,12 +226,12 @@ Other countries are grouped into geographic regions.
       <td>-4±0</td>
       <td>-4±0</td>
       <td>-7±0</td>
-      <td>-3±2</td>
+      <td>-5±2</td>
       <td>-6±0</td>
-      <td>-9±0</td>
+      <td>-10±0</td>
       <td>-6±2</td>
       <td>-2±0</td>
-      <td>-1±1</td>
+      <td>-2±1</td>
       <td>-5±0</td>
       <td>-4±0</td>
       <td>-5±1</td>
@@ -241,7 +241,7 @@ Other countries are grouped into geographic regions.
     <tr>
       <th>BA.2.75</th>
       <td>3±0</td>
-      <td>4±1</td>
+      <td>4±0</td>
       <td>1±0</td>
       <td>7±2</td>
       <td>&lt;NA&gt;</td>
@@ -251,7 +251,7 @@ Other countries are grouped into geographic regions.
       <td>4±0</td>
       <td>4±0</td>
       <td>2±0</td>
-      <td>0±5</td>
+      <td>7±2</td>
       <td>2±1</td>
       <td>4±2</td>
       <td>4±0</td>
@@ -259,10 +259,10 @@ Other countries are grouped into geographic regions.
       <td>-14±8</td>
       <td>&lt;NA&gt;</td>
       <td>3±2</td>
-      <td>1±1</td>
       <td>0±1</td>
+      <td>1±1</td>
       <td>4±0</td>
-      <td>0±2</td>
+      <td>1±1</td>
       <td>3±0</td>
       <td>5±1</td>
       <td>4±1</td>
@@ -276,44 +276,44 @@ Other countries are grouped into geographic regions.
       <td>2±0</td>
       <td>7±2</td>
       <td>-4±6</td>
-      <td>3±0</td>
+      <td>2±0</td>
       <td>3±1</td>
       <td>4±0</td>
       <td>5±0</td>
-      <td>3±0</td>
-      <td>2±1</td>
+      <td>2±0</td>
+      <td>1±1</td>
       <td>&lt;NA&gt;</td>
       <td>2±1</td>
-      <td>3±3</td>
-      <td>3±0</td>
-      <td>3±0</td>
-      <td>-7±6</td>
+      <td>2±3</td>
+      <td>4±0</td>
+      <td>4±0</td>
+      <td>-8±6</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>-9±7</td>
+      <td>-10±7</td>
       <td>6±1</td>
       <td>3±0</td>
-      <td>-3±5</td>
-      <td>4±1</td>
+      <td>-4±5</td>
+      <td>4±0</td>
       <td>2±1</td>
-      <td>&lt;NA&gt;</td>
+      <td>-16±6</td>
       <td>3±0</td>
       <td>3±0</td>
     </tr>
     <tr>
       <th>BA.2.75.2</th>
       <td>4±0</td>
-      <td>4±1</td>
+      <td>3±1</td>
       <td>2±0</td>
-      <td>5±2</td>
+      <td>4±2</td>
       <td>-10±7</td>
-      <td>5±1</td>
+      <td>4±1</td>
       <td>4±1</td>
       <td>4±1</td>
       <td>8±0</td>
       <td>4±1</td>
       <td>5±1</td>
-      <td>&lt;NA&gt;</td>
+      <td>-7±6</td>
       <td>4±1</td>
       <td>6±6</td>
       <td>7±1</td>
@@ -321,13 +321,13 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>-9±7</td>
-      <td>-14±7</td>
-      <td>1±4</td>
+      <td>-1±5</td>
+      <td>5±3</td>
       <td>4±0</td>
-      <td>-8±7</td>
+      <td>-9±7</td>
       <td>4±1</td>
       <td>7±2</td>
-      <td>1±4</td>
+      <td>5±1</td>
       <td>5±0</td>
       <td>5±0</td>
     </tr>
@@ -339,12 +339,12 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>4±1</td>
-      <td>3±2</td>
+      <td>4±2</td>
       <td>3±1</td>
       <td>6±0</td>
-      <td>1±3</td>
+      <td>0±3</td>
       <td>0±2</td>
-      <td>&lt;NA&gt;</td>
+      <td>-1±4</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>6±2</td>
@@ -355,8 +355,8 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>1±2</td>
-      <td>-1±4</td>
-      <td>2±2</td>
+      <td>-2±4</td>
+      <td>4±2</td>
       <td>3±5</td>
       <td>&lt;NA&gt;</td>
       <td>5±1</td>
@@ -365,17 +365,17 @@ Other countries are grouped into geographic regions.
     <tr>
       <th>BN.1</th>
       <td>7±1</td>
-      <td>9±2</td>
+      <td>8±2</td>
       <td>7±2</td>
       <td>6±2</td>
-      <td>-3±6</td>
-      <td>7±1</td>
-      <td>8±2</td>
+      <td>-4±7</td>
       <td>8±1</td>
-      <td>10±1</td>
-      <td>9±1</td>
-      <td>10±1</td>
-      <td>&lt;NA&gt;</td>
+      <td>7±2</td>
+      <td>8±1</td>
+      <td>11±0</td>
+      <td>8±1</td>
+      <td>11±1</td>
+      <td>0±6</td>
       <td>4±2</td>
       <td>&lt;NA&gt;</td>
       <td>11±1</td>
@@ -383,15 +383,15 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>&lt;NA&gt;</td>
-      <td>6±5</td>
+      <td>-6±6</td>
+      <td>5±5</td>
       <td>7±1</td>
       <td>&lt;NA&gt;</td>
-      <td>9±1</td>
-      <td>3±4</td>
-      <td>-8±6</td>
+      <td>10±1</td>
+      <td>5±4</td>
+      <td>6±3</td>
       <td>11±1</td>
-      <td>7±1</td>
+      <td>8±0</td>
     </tr>
     <tr>
       <th>BA.4</th>
@@ -403,7 +403,7 @@ Other countries are grouped into geographic regions.
       <td>-2±0</td>
       <td>-1±0</td>
       <td>-2±0</td>
-      <td>-2±0</td>
+      <td>-3±0</td>
       <td>-2±0</td>
       <td>-3±0</td>
       <td>-2±0</td>
@@ -416,11 +416,11 @@ Other countries are grouped into geographic regions.
       <td>-2±0</td>
       <td>-3±0</td>
       <td>-5±1</td>
-      <td>-2±0</td>
+      <td>-1±0</td>
       <td>-2±0</td>
       <td>-3±0</td>
       <td>-1±0</td>
-      <td>-2±1</td>
+      <td>-2±0</td>
       <td>-2±0</td>
       <td>-2±0</td>
     </tr>
@@ -435,23 +435,23 @@ Other countries are grouped into geographic regions.
       <td>3±0</td>
       <td>3±0</td>
       <td>4±1</td>
-      <td>3±0</td>
+      <td>1±0</td>
       <td>1±0</td>
       <td>3±0</td>
       <td>2±0</td>
       <td>0±0</td>
       <td>4±0</td>
       <td>3±0</td>
-      <td>3±0</td>
+      <td>2±0</td>
       <td>&lt;NA&gt;</td>
       <td>2±0</td>
-      <td>3±0</td>
+      <td>2±0</td>
       <td>0±1</td>
       <td>3±1</td>
       <td>0±0</td>
       <td>1±0</td>
       <td>3±0</td>
-      <td>1±1</td>
+      <td>2±1</td>
       <td>2±0</td>
       <td>2±0</td>
     </tr>
@@ -491,7 +491,7 @@ Other countries are grouped into geographic regions.
       <td>0±0</td>
       <td>1±0</td>
       <td>1±0</td>
-      <td>1±0</td>
+      <td>2±0</td>
       <td>2±0</td>
       <td>1±0</td>
       <td>1±0</td>
@@ -527,26 +527,26 @@ Other countries are grouped into geographic regions.
       <td>5±0</td>
       <td>5±0</td>
       <td>5±0</td>
-      <td>-6±5</td>
+      <td>3±3</td>
       <td>5±0</td>
       <td>5±0</td>
-      <td>3±2</td>
+      <td>5±1</td>
       <td>4±1</td>
       <td>5±1</td>
       <td>7±1</td>
       <td>4±0</td>
-      <td>5±2</td>
+      <td>6±1</td>
       <td>&lt;NA&gt;</td>
       <td>4±0</td>
-      <td>4±2</td>
-      <td>5±1</td>
+      <td>5±2</td>
+      <td>5±0</td>
       <td>2±7</td>
       <td>2±2</td>
       <td>9±1</td>
       <td>5±0</td>
-      <td>-1±4</td>
+      <td>-4±3</td>
       <td>5±0</td>
-      <td>5±0</td>
+      <td>4±0</td>
     </tr>
     <tr>
       <th>BA.5.2.6</th>
@@ -554,169 +554,169 @@ Other countries are grouped into geographic regions.
       <td>6±1</td>
       <td>4±1</td>
       <td>3±4</td>
-      <td>5±2</td>
-      <td>7±0</td>
+      <td>6±2</td>
+      <td>6±0</td>
       <td>6±0</td>
       <td>6±0</td>
       <td>4±1</td>
-      <td>5±1</td>
       <td>5±0</td>
-      <td>&lt;NA&gt;</td>
-      <td>5±3</td>
+      <td>5±0</td>
+      <td>-7±7</td>
+      <td>6±2</td>
       <td>4±1</td>
       <td>6±0</td>
       <td>5±0</td>
-      <td>&lt;NA&gt;</td>
+      <td>-11±9</td>
       <td>&lt;NA&gt;</td>
       <td>-1±5</td>
       <td>&lt;NA&gt;</td>
-      <td>7±1</td>
+      <td>6±1</td>
       <td>7±1</td>
       <td>2±0</td>
       <td>6±1</td>
       <td>5±2</td>
-      <td>6±1</td>
-      <td>4±0</td>
       <td>6±0</td>
+      <td>3±0</td>
+      <td>5±0</td>
     </tr>
     <tr>
       <th>BA.5.2.13</th>
-      <td>6±1</td>
+      <td>5±1</td>
       <td>-2±3</td>
-      <td>7±1</td>
-      <td>-1±5</td>
+      <td>6±1</td>
+      <td>-2±6</td>
       <td>&lt;NA&gt;</td>
       <td>6±1</td>
       <td>5±1</td>
       <td>7±1</td>
       <td>-3±3</td>
-      <td>7±3</td>
+      <td>5±2</td>
       <td>-7±4</td>
       <td>-3±6</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>8±1</td>
-      <td>4±1</td>
+      <td>9±1</td>
+      <td>5±1</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>&lt;NA&gt;</td>
+      <td>5±6</td>
       <td>9±5</td>
-      <td>-3±5</td>
-      <td>&lt;NA&gt;</td>
+      <td>-6±6</td>
+      <td>3±6</td>
       <td>6±2</td>
-      <td>-5±5</td>
+      <td>0±3</td>
       <td>5±1</td>
       <td>5±0</td>
     </tr>
     <tr>
       <th>CK.2.1.1</th>
-      <td>7±3</td>
-      <td>7±3</td>
+      <td>6±3</td>
+      <td>6±3</td>
       <td>3±3</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>9±2</td>
-      <td>14±3</td>
-      <td>10±1</td>
+      <td>9±1</td>
+      <td>13±3</td>
+      <td>9±1</td>
       <td>&lt;NA&gt;</td>
-      <td>5±3</td>
+      <td>2±3</td>
       <td>9±3</td>
-      <td>8±2</td>
+      <td>8±3</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>14±2</td>
+      <td>13±2</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>9±3</td>
+      <td>8±3</td>
+      <td>12±3</td>
+      <td>16±2</td>
       <td>&lt;NA&gt;</td>
-      <td>14±2</td>
-      <td>&lt;NA&gt;</td>
-      <td>8±2</td>
-      <td>4±3</td>
+      <td>7±2</td>
+      <td>6±2</td>
     </tr>
     <tr>
       <th>BQ.1</th>
-      <td>10±1</td>
+      <td>11±1</td>
       <td>9±1</td>
       <td>7±0</td>
-      <td>8±2</td>
-      <td>1±5</td>
+      <td>9±2</td>
+      <td>6±6</td>
+      <td>6±0</td>
+      <td>9±0</td>
       <td>9±1</td>
-      <td>8±0</td>
-      <td>8±1</td>
-      <td>3±8</td>
-      <td>9±1</td>
-      <td>8±2</td>
+      <td>6±8</td>
+      <td>-19±12</td>
+      <td>10±2</td>
+      <td>-24±5</td>
+      <td>6±2</td>
+      <td>11±1</td>
+      <td>15±2</td>
+      <td>9±0</td>
+      <td>0±5</td>
       <td>&lt;NA&gt;</td>
-      <td>4±2</td>
+      <td>5±2</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>24±3</td>
+      <td>6±2</td>
+      <td>9±1</td>
       <td>10±1</td>
-      <td>13±2</td>
-      <td>9±0</td>
-      <td>-2±5</td>
-      <td>&lt;NA&gt;</td>
-      <td>0±3</td>
-      <td>&lt;NA&gt;</td>
-      <td>&lt;NA&gt;</td>
-      <td>19±3</td>
-      <td>4±2</td>
-      <td>8±1</td>
-      <td>9±1</td>
-      <td>0±4</td>
-      <td>9±0</td>
+      <td>5±1</td>
       <td>8±0</td>
+      <td>6±0</td>
     </tr>
     <tr>
       <th>BQ.1.1</th>
       <td>10±1</td>
-      <td>10±1</td>
-      <td>8±1</td>
-      <td>13±2</td>
-      <td>&lt;NA&gt;</td>
-      <td>11±0</td>
       <td>9±0</td>
+      <td>9±1</td>
+      <td>12±2</td>
+      <td>&lt;NA&gt;</td>
+      <td>10±0</td>
+      <td>8±0</td>
       <td>11±1</td>
       <td>&lt;NA&gt;</td>
-      <td>11±1</td>
-      <td>13±1</td>
-      <td>-1±6</td>
-      <td>3±7</td>
-      <td>13±1</td>
+      <td>9±1</td>
+      <td>12±1</td>
+      <td>10±2</td>
+      <td>0±7</td>
+      <td>14±1</td>
       <td>18±2</td>
-      <td>11±0</td>
-      <td>-7±8</td>
+      <td>12±0</td>
+      <td>-9±8</td>
       <td>&lt;NA&gt;</td>
-      <td>5±6</td>
+      <td>9±4</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>19±4</td>
-      <td>7±3</td>
-      <td>15±2</td>
+      <td>6±2</td>
+      <td>12±1</td>
       <td>13±1</td>
-      <td>4±3</td>
+      <td>7±1</td>
       <td>11±0</td>
       <td>9±0</td>
     </tr>
     <tr>
       <th>BQ.1.8</th>
-      <td>7±2</td>
+      <td>6±3</td>
       <td>5±2</td>
-      <td>2±2</td>
+      <td>1±2</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>9±2</td>
-      <td>14±4</td>
+      <td>10±1</td>
+      <td>12±4</td>
       <td>9±1</td>
       <td>&lt;NA&gt;</td>
-      <td>4±3</td>
+      <td>-1±3</td>
       <td>&lt;NA&gt;</td>
-      <td>7±3</td>
+      <td>5±3</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
@@ -726,13 +726,13 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>19±3</td>
+      <td>17±4</td>
       <td>&lt;NA&gt;</td>
-      <td>&lt;NA&gt;</td>
-      <td>13±3</td>
+      <td>10±4</td>
+      <td>12±3</td>
       <td>&lt;NA&gt;</td>
       <td>7±2</td>
-      <td>10±1</td>
+      <td>9±1</td>
     </tr>
     <tr>
       <th>BQ.1.9</th>
@@ -745,13 +745,13 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>-2±3</td>
+      <td>-8±3</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>11±1</td>
+      <td>10±1</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
@@ -762,7 +762,7 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>-1±2</td>
+      <td>-2±2</td>
       <td>&lt;NA&gt;</td>
     </tr>
     <tr>
@@ -772,17 +772,17 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>6±2</td>
-      <td>12±2</td>
+      <td>9±2</td>
+      <td>13±2</td>
       <td>9±2</td>
       <td>&lt;NA&gt;</td>
-      <td>2±3</td>
-      <td>6±3</td>
+      <td>0±3</td>
+      <td>7±3</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>15±2</td>
       <td>&lt;NA&gt;</td>
-      <td>8±2</td>
+      <td>9±2</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
@@ -792,18 +792,18 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>&lt;NA&gt;</td>
-      <td>5±2</td>
       <td>-2±3</td>
+      <td>5±2</td>
+      <td>1±3</td>
     </tr>
     <tr>
       <th>BQ.1.19</th>
-      <td>2±3</td>
       <td>1±3</td>
+      <td>2±3</td>
       <td>5±2</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>-1±3</td>
+      <td>0±3</td>
       <td>10±3</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
@@ -825,82 +825,82 @@ Other countries are grouped into geographic regions.
       <td>6±3</td>
       <td>&lt;NA&gt;</td>
       <td>0±3</td>
-      <td>-3±3</td>
+      <td>-1±2</td>
     </tr>
     <tr>
       <th>XBB</th>
       <td>8±1</td>
-      <td>6±2</td>
+      <td>5±2</td>
       <td>4±1</td>
       <td>3±6</td>
       <td>&lt;NA&gt;</td>
+      <td>7±2</td>
+      <td>11±3</td>
       <td>6±2</td>
-      <td>12±3</td>
-      <td>5±2</td>
       <td>11±0</td>
-      <td>10±2</td>
-      <td>8±2</td>
+      <td>7±2</td>
+      <td>7±2</td>
       <td>&lt;NA&gt;</td>
       <td>5±4</td>
-      <td>&lt;NA&gt;</td>
-      <td>14±1</td>
+      <td>7±7</td>
       <td>12±1</td>
+      <td>11±1</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>9±1</td>
-      <td>-5±8</td>
-      <td>4±4</td>
-      <td>&lt;NA&gt;</td>
-      <td>&lt;NA&gt;</td>
+      <td>-7±8</td>
+      <td>11±3</td>
+      <td>-2±7</td>
+      <td>-13±8</td>
       <td>8±1</td>
       <td>7±1</td>
     </tr>
     <tr>
       <th>XBB.1</th>
-      <td>13±1</td>
-      <td>4±3</td>
-      <td>1±3</td>
+      <td>12±1</td>
+      <td>4±2</td>
+      <td>2±3</td>
       <td>9±4</td>
       <td>&lt;NA&gt;</td>
-      <td>8±2</td>
-      <td>12±4</td>
+      <td>12±1</td>
+      <td>9±4</td>
       <td>9±2</td>
       <td>16±1</td>
-      <td>10±2</td>
-      <td>12±3</td>
+      <td>10±1</td>
+      <td>11±3</td>
       <td>&lt;NA&gt;</td>
       <td>9±4</td>
       <td>&lt;NA&gt;</td>
       <td>10±1</td>
-      <td>14±2</td>
+      <td>12±2</td>
       <td>&lt;NA&gt;</td>
-      <td>47±3</td>
+      <td>31±4</td>
       <td>5±4</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>11±0</td>
       <td>&lt;NA&gt;</td>
-      <td>9±3</td>
-      <td>&lt;NA&gt;</td>
-      <td>&lt;NA&gt;</td>
-      <td>11±1</td>
       <td>10±2</td>
+      <td>&lt;NA&gt;</td>
+      <td>-1±4</td>
+      <td>11±1</td>
+      <td>11±2</td>
     </tr>
     <tr>
       <th>XBE</th>
       <td>-4±4</td>
       <td>&lt;NA&gt;</td>
-      <td>1±3</td>
+      <td>0±3</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>-2±3</td>
+      <td>-1±3</td>
       <td>-1±2</td>
       <td>1±2</td>
       <td>-1±1</td>
-      <td>-2±4</td>
+      <td>0±4</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
@@ -914,7 +914,7 @@ Other countries are grouped into geographic regions.
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
-      <td>3±0</td>
+      <td>2±0</td>
       <td>&lt;NA&gt;</td>
       <td>&lt;NA&gt;</td>
       <td>4±1</td>
@@ -1098,33 +1098,33 @@ Latest estimated variant proportion.
     </tr>
     <tr>
       <th>BA.2.3.20</th>
-      <td>3.9</td>
-      <td>0.3</td>
-      <td>0.8</td>
-      <td>(0.0)</td>
-      <td>0.7</td>
-      <td>0.5</td>
-      <td>0.3</td>
-      <td>0.8</td>
+      <td>3.4</td>
       <td>0.2</td>
-      <td>1.4</td>
-      <td>3.5</td>
+      <td>0.7</td>
       <td>(0.0)</td>
+      <td>0.5</td>
+      <td>0.4</td>
+      <td>0.3</td>
+      <td>0.7</td>
+      <td>0.1</td>
+      <td>1.6</td>
       <td>3.1</td>
       <td>(0.0)</td>
+      <td>2.7</td>
       <td>(0.0)</td>
-      <td>1.1</td>
       <td>(0.0)</td>
-      <td>6.4</td>
+      <td>0.8</td>
+      <td>(0.0)</td>
+      <td>5.1</td>
       <td>0.1</td>
-      <td>0.1</td>
+      <td>0.0</td>
       <td>1.1</td>
       <td>0.3</td>
+      <td>1.2</td>
+      <td>2.4</td>
+      <td>2.7</td>
       <td>(0.0)</td>
-      <td>0.3</td>
-      <td>2.8</td>
-      <td>(0.0)</td>
-      <td>2.3</td>
+      <td>12.8</td>
       <td>(0.0)</td>
     </tr>
     <tr>
@@ -1160,30 +1160,30 @@ Latest estimated variant proportion.
     </tr>
     <tr>
       <th>BA.2.75</th>
-      <td>4.0</td>
-      <td>0.8</td>
-      <td>0.7</td>
-      <td>1.4</td>
-      <td>(0.0)</td>
-      <td>0.8</td>
-      <td>0.7</td>
-      <td>0.6</td>
-      <td>6.0</td>
-      <td>1.7</td>
-      <td>0.4</td>
-      <td>0.5</td>
-      <td>4.2</td>
-      <td>0.2</td>
-      <td>0.1</td>
-      <td>2.4</td>
-      <td>0.5</td>
+      <td>3.7</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>1.6</td>
+      <td>(0.0)</td>
       <td>0.9</td>
-      <td>1.6</td>
-      <td>0.0</td>
+      <td>0.7</td>
+      <td>0.6</td>
+      <td>4.8</td>
+      <td>1.8</td>
+      <td>0.4</td>
+      <td>3.6</td>
+      <td>4.4</td>
+      <td>0.2</td>
+      <td>0.1</td>
+      <td>2.2</td>
+      <td>0.8</td>
+      <td>1.1</td>
+      <td>0.6</td>
       <td>1.9</td>
+      <td>0.9</td>
+      <td>1.7</td>
+      <td>0.0</td>
+      <td>1.4</td>
       <td>1.5</td>
       <td>0.0</td>
       <td>(0.0)</td>
@@ -1191,57 +1191,57 @@ Latest estimated variant proportion.
     </tr>
     <tr>
       <th>BA.2.75.1</th>
-      <td>1.0</td>
+      <td>0.8</td>
+      <td>0.1</td>
       <td>0.2</td>
-      <td>0.3</td>
-      <td>1.2</td>
-      <td>0.2</td>
-      <td>0.3</td>
-      <td>0.1</td>
-      <td>0.3</td>
-      <td>4.2</td>
-      <td>0.3</td>
-      <td>0.1</td>
-      <td>(0.0)</td>
-      <td>1.0</td>
-      <td>0.1</td>
-      <td>1.5</td>
       <td>1.3</td>
       <td>0.2</td>
-      <td>0.7</td>
+      <td>0.2</td>
+      <td>0.1</td>
+      <td>0.2</td>
+      <td>2.8</td>
+      <td>0.3</td>
       <td>0.1</td>
       <td>(0.0)</td>
-      <td>0.2</td>
-      <td>0.4</td>
+      <td>1.0</td>
       <td>0.0</td>
-      <td>0.7</td>
-      <td>0.4</td>
+      <td>2.6</td>
+      <td>1.0</td>
+      <td>0.1</td>
+      <td>0.5</td>
+      <td>0.1</td>
+      <td>0.0</td>
+      <td>0.2</td>
       <td>0.3</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.3</td>
+      <td>0.2</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
     </tr>
     <tr>
       <th>BA.2.75.2</th>
-      <td>2.0</td>
-      <td>0.4</td>
+      <td>1.9</td>
+      <td>0.3</td>
       <td>0.4</td>
       <td>0.5</td>
       <td>0.0</td>
       <td>0.5</td>
       <td>0.2</td>
       <td>0.3</td>
-      <td>9.2</td>
-      <td>0.8</td>
-      <td>0.6</td>
-      <td>(0.0)</td>
-      <td>4.1</td>
-      <td>0.0</td>
+      <td>8.4</td>
+      <td>1.0</td>
+      <td>0.5</td>
       <td>0.1</td>
-      <td>0.7</td>
+      <td>4.6</td>
+      <td>0.1</td>
+      <td>0.4</td>
+      <td>0.6</td>
       <td>0.0</td>
       <td>0.7</td>
       <td>0.5</td>
-      <td>0.2</td>
+      <td>0.9</td>
       <td>0.8</td>
       <td>1.2</td>
       <td>0.0</td>
@@ -1253,64 +1253,64 @@ Latest estimated variant proportion.
     </tr>
     <tr>
       <th>BA.2.75.4</th>
-      <td>3.0</td>
-      <td>0.3</td>
-      <td>0.2</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.1</td>
-      <td>0.0</td>
-      <td>0.1</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>0.0</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.0</td>
+      <td>3.6</td>
       <td>0.3</td>
       <td>0.1</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>0.2</td>
+      <td>0.1</td>
+      <td>0.1</td>
+      <td>1.0</td>
+      <td>0.2</td>
+      <td>0.0</td>
+      <td>0.3</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>0.0</td>
+      <td>0.2</td>
+      <td>0.1</td>
       <td>0.1</td>
       <td>(0.0)</td>
       <td>0.2</td>
       <td>0.2</td>
       <td>(0.0)</td>
       <td>0.1</td>
-      <td>0.6</td>
+      <td>0.5</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
     </tr>
     <tr>
       <th>BN.1</th>
+      <td>6.2</td>
+      <td>2.2</td>
+      <td>0.8</td>
+      <td>2.3</td>
+      <td>0.3</td>
+      <td>3.1</td>
+      <td>0.4</td>
+      <td>2.4</td>
+      <td>14.9</td>
+      <td>6.3</td>
       <td>5.6</td>
-      <td>2.2</td>
-      <td>0.7</td>
-      <td>2.1</td>
-      <td>0.3</td>
-      <td>2.4</td>
-      <td>0.5</td>
-      <td>2.2</td>
-      <td>8.6</td>
-      <td>5.7</td>
-      <td>3.8</td>
-      <td>(0.1)</td>
-      <td>2.4</td>
-      <td>(0.1)</td>
-      <td>1.1</td>
-      <td>2.4</td>
-      <td>(0.1)</td>
-      <td>7.3</td>
-      <td>0.3</td>
-      <td>0.1</td>
       <td>1.9</td>
-      <td>3.5</td>
-      <td>(0.0)</td>
-      <td>7.6</td>
-      <td>4.8</td>
+      <td>2.6</td>
+      <td>0.2</td>
+      <td>1.1</td>
+      <td>2.3</td>
       <td>(0.1)</td>
+      <td>11.1</td>
+      <td>0.5</td>
+      <td>2.1</td>
+      <td>2.7</td>
+      <td>5.1</td>
       <td>(0.0)</td>
+      <td>9.7</td>
+      <td>5.5</td>
+      <td>(0.1)</td>
+      <td>(0.1)</td>
       <td>(0.1)</td>
     </tr>
     <tr>
@@ -1318,20 +1318,20 @@ Latest estimated variant proportion.
       <td>0.2</td>
       <td>0.0</td>
       <td>0.1</td>
-      <td>2.6</td>
-      <td>1.9</td>
+      <td>2.2</td>
+      <td>1.7</td>
       <td>0.1</td>
       <td>0.1</td>
       <td>0.1</td>
       <td>0.0</td>
       <td>0.2</td>
       <td>0.0</td>
-      <td>1.0</td>
-      <td>0.3</td>
       <td>0.6</td>
+      <td>0.3</td>
+      <td>0.5</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>4.9</td>
+      <td>4.2</td>
       <td>0.0</td>
       <td>0.1</td>
       <td>0.0</td>
@@ -1340,191 +1340,191 @@ Latest estimated variant proportion.
       <td>0.0</td>
       <td>0.0</td>
       <td>0.1</td>
-      <td>0.4</td>
-      <td>0.2</td>
-      <td>1.0</td>
+      <td>0.5</td>
+      <td>0.6</td>
+      <td>0.9</td>
     </tr>
     <tr>
       <th>BA.4.6</th>
-      <td>4.4</td>
-      <td>3.0</td>
-      <td>8.4</td>
-      <td>21.2</td>
-      <td>8.6</td>
-      <td>1.9</td>
-      <td>2.3</td>
-      <td>1.7</td>
-      <td>0.0</td>
-      <td>1.7</td>
-      <td>0.2</td>
-      <td>4.3</td>
-      <td>7.9</td>
-      <td>43.1</td>
-      <td>0.1</td>
-      <td>0.1</td>
-      <td>3.1</td>
-      <td>0.2</td>
-      <td>3.9</td>
-      <td>0.2</td>
+      <td>3.6</td>
+      <td>2.6</td>
+      <td>7.6</td>
+      <td>18.8</td>
       <td>8.7</td>
-      <td>3.1</td>
+      <td>1.7</td>
+      <td>1.9</td>
+      <td>1.5</td>
       <td>0.0</td>
-      <td>0.9</td>
-      <td>2.3</td>
-      <td>70.1</td>
+      <td>0.7</td>
+      <td>0.2</td>
+      <td>3.7</td>
+      <td>8.1</td>
+      <td>43.3</td>
+      <td>0.1</td>
+      <td>0.0</td>
+      <td>2.9</td>
+      <td>0.1</td>
+      <td>2.9</td>
+      <td>0.2</td>
+      <td>7.7</td>
+      <td>2.9</td>
+      <td>0.0</td>
+      <td>0.7</td>
+      <td>1.9</td>
+      <td>52.3</td>
       <td>(0.0)</td>
-      <td>33.3</td>
+      <td>31.3</td>
     </tr>
     <tr>
       <th>BA.5</th>
-      <td>6.3</td>
-      <td>6.9</td>
-      <td>12.2</td>
-      <td>7.7</td>
-      <td>35.0</td>
-      <td>8.6</td>
-      <td>4.5</td>
-      <td>13.3</td>
+      <td>4.8</td>
+      <td>5.7</td>
+      <td>10.1</td>
+      <td>6.6</td>
+      <td>32.8</td>
+      <td>7.3</td>
+      <td>3.8</td>
+      <td>10.9</td>
       <td>0.0</td>
-      <td>4.9</td>
-      <td>4.0</td>
-      <td>34.6</td>
-      <td>16.2</td>
-      <td>29.8</td>
-      <td>3.8</td>
-      <td>0.2</td>
-      <td>50.0</td>
-      <td>1.9</td>
-      <td>8.5</td>
-      <td>6.7</td>
-      <td>9.6</td>
-      <td>6.9</td>
+      <td>4.8</td>
+      <td>3.3</td>
+      <td>21.4</td>
+      <td>15.1</td>
+      <td>29.1</td>
+      <td>3.4</td>
       <td>0.1</td>
-      <td>0.9</td>
-      <td>9.0</td>
-      <td>8.3</td>
-      <td>3.8</td>
-      <td>28.0</td>
+      <td>50.4</td>
+      <td>1.6</td>
+      <td>5.5</td>
+      <td>5.3</td>
+      <td>8.8</td>
+      <td>6.1</td>
+      <td>0.0</td>
+      <td>0.6</td>
+      <td>7.3</td>
+      <td>13.1</td>
+      <td>5.2</td>
+      <td>25.8</td>
     </tr>
     <tr>
       <th>BA.5.2</th>
-      <td>23.8</td>
-      <td>11.7</td>
-      <td>39.3</td>
-      <td>32.3</td>
-      <td>45.1</td>
-      <td>22.0</td>
-      <td>7.6</td>
-      <td>28.9</td>
-      <td>0.2</td>
-      <td>19.6</td>
-      <td>70.0</td>
-      <td>42.4</td>
-      <td>42.2</td>
-      <td>23.8</td>
-      <td>73.1</td>
-      <td>2.6</td>
-      <td>10.7</td>
-      <td>49.6</td>
-      <td>11.5</td>
-      <td>51.0</td>
-      <td>24.1</td>
-      <td>14.9</td>
+      <td>20.2</td>
+      <td>10.2</td>
+      <td>35.6</td>
+      <td>30.5</td>
+      <td>47.1</td>
+      <td>20.2</td>
+      <td>7.0</td>
+      <td>25.4</td>
       <td>0.1</td>
-      <td>14.9</td>
-      <td>18.7</td>
-      <td>15.2</td>
-      <td>27.9</td>
-      <td>23.4</td>
+      <td>20.8</td>
+      <td>66.3</td>
+      <td>30.2</td>
+      <td>40.6</td>
+      <td>22.5</td>
+      <td>74.5</td>
+      <td>2.0</td>
+      <td>9.6</td>
+      <td>44.0</td>
+      <td>8.0</td>
+      <td>35.5</td>
+      <td>22.3</td>
+      <td>14.2</td>
+      <td>0.0</td>
+      <td>10.9</td>
+      <td>16.0</td>
+      <td>24.1</td>
+      <td>58.4</td>
+      <td>21.2</td>
     </tr>
     <tr>
       <th>BF.7</th>
-      <td>4.6</td>
-      <td>23.1</td>
-      <td>10.1</td>
+      <td>4.7</td>
+      <td>21.0</td>
+      <td>10.4</td>
       <td>1.9</td>
-      <td>0.8</td>
-      <td>23.5</td>
-      <td>9.9</td>
-      <td>22.0</td>
-      <td>0.0</td>
-      <td>9.9</td>
-      <td>2.1</td>
-      <td>1.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>10.2</td>
-      <td>0.0</td>
-      <td>1.2</td>
-      <td>5.4</td>
-      <td>9.1</td>
       <td>0.9</td>
-      <td>5.2</td>
-      <td>8.0</td>
-      <td>0.2</td>
+      <td>22.8</td>
+      <td>9.8</td>
+      <td>23.0</td>
+      <td>0.0</td>
+      <td>10.6</td>
+      <td>2.2</td>
+      <td>3.5</td>
+      <td>3.5</td>
+      <td>3.0</td>
+      <td>8.8</td>
+      <td>0.0</td>
+      <td>1.5</td>
+      <td>7.2</td>
+      <td>7.7</td>
+      <td>0.1</td>
+      <td>6.0</td>
+      <td>8.7</td>
+      <td>0.1</td>
       <td>0.5</td>
-      <td>15.2</td>
-      <td>3.6</td>
-      <td>(0.1)</td>
-      <td>10.0</td>
+      <td>14.8</td>
+      <td>8.1</td>
+      <td>(0.2)</td>
+      <td>10.7</td>
     </tr>
     <tr>
       <th>BA.5.2.6</th>
-      <td>3.6</td>
-      <td>1.9</td>
+      <td>3.0</td>
+      <td>1.7</td>
       <td>0.4</td>
-      <td>0.7</td>
-      <td>5.6</td>
-      <td>2.7</td>
-      <td>1.4</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>1.5</td>
-      <td>1.8</td>
-      <td>(0.1)</td>
-      <td>3.9</td>
-      <td>(0.1)</td>
-      <td>9.3</td>
-      <td>1.8</td>
-      <td>5.2</td>
-      <td>1.5</td>
-      <td>0.5</td>
-      <td>26.6</td>
+      <td>0.6</td>
+      <td>6.3</td>
+      <td>2.2</td>
       <td>1.1</td>
-      <td>2.6</td>
-      <td>0.1</td>
-      <td>16.7</td>
-      <td>1.6</td>
+      <td>1.9</td>
+      <td>0.0</td>
+      <td>1.4</td>
+      <td>1.7</td>
+      <td>0.3</td>
+      <td>4.1</td>
       <td>(0.1)</td>
-      <td>(0.0)</td>
+      <td>7.2</td>
+      <td>1.5</td>
+      <td>3.7</td>
+      <td>1.5</td>
+      <td>0.3</td>
+      <td>19.3</td>
+      <td>0.8</td>
+      <td>1.9</td>
+      <td>0.1</td>
+      <td>11.9</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>(0.1)</td>
       <td>0.3</td>
     </tr>
     <tr>
       <th>BA.5.2.13</th>
-      <td>0.5</td>
+      <td>0.4</td>
       <td>0.0</td>
-      <td>0.6</td>
-      <td>0.3</td>
+      <td>0.5</td>
+      <td>0.2</td>
       <td>(0.0)</td>
       <td>0.9</td>
       <td>0.1</td>
       <td>0.4</td>
       <td>0.0</td>
-      <td>0.3</td>
+      <td>0.2</td>
       <td>0.0</td>
-      <td>0.6</td>
+      <td>0.2</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.1</td>
-      <td>0.3</td>
-      <td>(0.0)</td>
-      <td>0.4</td>
+      <td>0.9</td>
       <td>0.1</td>
       <td>0.2</td>
-      <td>2.3</td>
+      <td>0.2</td>
+      <td>0.3</td>
+      <td>0.1</td>
+      <td>0.2</td>
+      <td>2.2</td>
       <td>(0.0)</td>
-      <td>0.7</td>
+      <td>0.6</td>
       <td>0.2</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
@@ -1533,123 +1533,123 @@ Latest estimated variant proportion.
     <tr>
       <th>CK.2.1.1</th>
       <td>0.2</td>
-      <td>0.3</td>
+      <td>0.5</td>
       <td>0.1</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>0.9</td>
-      <td>0.3</td>
-      <td>3.4</td>
-      <td>(0.0)</td>
-      <td>0.5</td>
+      <td>1.1</td>
       <td>0.4</td>
-      <td>8.1</td>
+      <td>3.6</td>
+      <td>(0.0)</td>
+      <td>0.3</td>
+      <td>0.4</td>
+      <td>4.6</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>3.3</td>
-      <td>(0.0)</td>
-      <td>9.8</td>
+      <td>2.3</td>
+      <td>0.5</td>
+      <td>14.1</td>
       <td>(0.0)</td>
       <td>0.5</td>
-      <td>0.1</td>
+      <td>0.2</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>1.7</td>
+      <td>1.9</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
     </tr>
     <tr>
       <th>BQ.1</th>
-      <td>10.2</td>
-      <td>15.7</td>
-      <td>12.2</td>
-      <td>11.6</td>
-      <td>1.0</td>
-      <td>8.4</td>
-      <td>6.7</td>
-      <td>8.1</td>
-      <td>0.3</td>
-      <td>13.7</td>
-      <td>1.4</td>
-      <td>(0.2)</td>
-      <td>4.1</td>
-      <td>(0.2)</td>
-      <td>(0.2)</td>
-      <td>1.5</td>
-      <td>9.4</td>
-      <td>3.7</td>
-      <td>11.5</td>
-      <td>3.9</td>
-      <td>20.1</td>
-      <td>16.3</td>
-      <td>23.0</td>
+      <td>13.0</td>
+      <td>16.9</td>
+      <td>11.7</td>
+      <td>12.9</td>
+      <td>0.5</td>
       <td>6.4</td>
-      <td>13.5</td>
-      <td>1.8</td>
+      <td>8.1</td>
+      <td>8.5</td>
+      <td>0.1</td>
+      <td>4.1</td>
+      <td>1.7</td>
+      <td>5.2</td>
+      <td>5.8</td>
+      <td>(0.2)</td>
+      <td>(0.2)</td>
+      <td>2.2</td>
+      <td>11.9</td>
+      <td>4.5</td>
+      <td>12.6</td>
+      <td>14.0</td>
+      <td>16.6</td>
+      <td>11.3</td>
+      <td>19.8</td>
+      <td>7.9</td>
+      <td>12.7</td>
+      <td>1.2</td>
       <td>(0.1)</td>
-      <td>0.6</td>
+      <td>1.8</td>
     </tr>
     <tr>
       <th>BQ.1.1</th>
+      <td>13.0</td>
+      <td>35.5</td>
+      <td>19.8</td>
+      <td>18.0</td>
+      <td>(0.6)</td>
+      <td>26.9</td>
+      <td>63.9</td>
+      <td>17.5</td>
+      <td>(0.2)</td>
+      <td>39.7</td>
       <td>10.7</td>
-      <td>31.2</td>
-      <td>12.7</td>
-      <td>14.0</td>
+      <td>22.4</td>
+      <td>0.3</td>
       <td>(0.5)</td>
-      <td>23.1</td>
-      <td>63.6</td>
-      <td>13.1</td>
-      <td>(0.2)</td>
-      <td>33.3</td>
-      <td>7.3</td>
-      <td>1.6</td>
-      <td>0.2</td>
-      <td>(0.4)</td>
-      <td>(0.4)</td>
-      <td>2.3</td>
-      <td>10.6</td>
-      <td>18.9</td>
-      <td>41.0</td>
-      <td>8.3</td>
-      <td>22.1</td>
-      <td>28.5</td>
-      <td>74.4</td>
-      <td>14.3</td>
-      <td>15.5</td>
+      <td>(0.5)</td>
+      <td>3.6</td>
+      <td>11.9</td>
+      <td>16.5</td>
+      <td>45.2</td>
+      <td>18.7</td>
+      <td>27.6</td>
+      <td>33.6</td>
+      <td>76.1</td>
+      <td>21.6</td>
+      <td>23.3</td>
       <td>0.0</td>
-      <td>(0.2)</td>
-      <td>1.0</td>
+      <td>(0.4)</td>
+      <td>5.6</td>
     </tr>
     <tr>
       <th>BQ.1.8</th>
-      <td>1.1</td>
+      <td>0.8</td>
       <td>0.5</td>
       <td>0.1</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>1.3</td>
+      <td>1.8</td>
       <td>0.3</td>
-      <td>0.9</td>
+      <td>0.8</td>
       <td>(0.0)</td>
-      <td>0.3</td>
+      <td>0.1</td>
       <td>(0.0)</td>
-      <td>4.8</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.3</td>
+      <td>1.8</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>1.6</td>
       <td>(0.0)</td>
       <td>0.3</td>
-      <td>8.5</td>
-      <td>(0.0)</td>
       <td>(0.0)</td>
       <td>1.0</td>
+      <td>1.3</td>
+      <td>(0.0)</td>
+      <td>0.3</td>
+      <td>8.2</td>
+      <td>(0.0)</td>
+      <td>(0.0)</td>
+      <td>0.8</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
@@ -1665,7 +1665,7 @@ Latest estimated variant proportion.
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>0.1</td>
+      <td>0.0</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
@@ -1680,7 +1680,7 @@ Latest estimated variant proportion.
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>2.2</td>
+      <td>1.5</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
@@ -1692,12 +1692,12 @@ Latest estimated variant proportion.
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>0.5</td>
-      <td>0.7</td>
       <td>0.9</td>
+      <td>1.2</td>
+      <td>1.1</td>
       <td>(0.0)</td>
       <td>0.2</td>
-      <td>0.2</td>
+      <td>0.3</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
@@ -1705,13 +1705,13 @@ Latest estimated variant proportion.
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
-      <td>0.1</td>
-      <td>0.0</td>
-      <td>2.0</td>
       <td>(0.0)</td>
       <td>0.3</td>
+      <td>0.1</td>
+      <td>0.0</td>
+      <td>2.3</td>
+      <td>(0.0)</td>
+      <td>0.4</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
@@ -1750,64 +1750,64 @@ Latest estimated variant proportion.
     <tr>
       <th>XBB</th>
       <td>2.9</td>
-      <td>0.6</td>
       <td>0.4</td>
       <td>0.3</td>
+      <td>0.2</td>
       <td>(0.1)</td>
       <td>0.3</td>
-      <td>0.4</td>
+      <td>0.3</td>
       <td>0.2</td>
-      <td>38.7</td>
-      <td>1.0</td>
+      <td>35.2</td>
+      <td>0.7</td>
+      <td>0.8</td>
+      <td>(0.0)</td>
+      <td>2.1</td>
+      <td>(0.1)</td>
+      <td>(0.1)</td>
+      <td>6.8</td>
+      <td>0.0</td>
       <td>1.1</td>
-      <td>(0.1)</td>
-      <td>2.3</td>
-      <td>(0.1)</td>
-      <td>(0.1)</td>
-      <td>8.5</td>
       <td>0.1</td>
-      <td>0.2</td>
-      <td>(0.0)</td>
-      <td>(0.0)</td>
+      <td>0.0</td>
+      <td>0.5</td>
       <td>0.6</td>
-      <td>0.6</td>
+      <td>0.0</td>
+      <td>11.6</td>
+      <td>1.1</td>
       <td>(0.0)</td>
-      <td>13.3</td>
-      <td>1.6</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
-      <td>(0.1)</td>
     </tr>
     <tr>
       <th>XBB.1</th>
-      <td>12.0</td>
-      <td>0.6</td>
+      <td>13.8</td>
+      <td>0.5</td>
       <td>0.1</td>
+      <td>2.3</td>
+      <td>(0.1)</td>
+      <td>2.0</td>
+      <td>0.1</td>
+      <td>0.7</td>
+      <td>32.3</td>
+      <td>5.2</td>
+      <td>2.7</td>
+      <td>(0.1)</td>
+      <td>4.8</td>
+      <td>(0.1)</td>
+      <td>(0.1)</td>
+      <td>76.3</td>
+      <td>(0.1)</td>
+      <td>3.0</td>
+      <td>(0.1)</td>
+      <td>1.4</td>
+      <td>2.3</td>
+      <td>1.1</td>
+      <td>(0.0)</td>
+      <td>18.0</td>
       <td>2.2</td>
       <td>(0.1)</td>
-      <td>1.0</td>
-      <td>0.1</td>
-      <td>0.7</td>
-      <td>30.9</td>
-      <td>2.9</td>
-      <td>3.1</td>
-      <td>(0.1)</td>
-      <td>4.9</td>
-      <td>(0.1)</td>
-      <td>(0.1)</td>
-      <td>74.9</td>
-      <td>(0.1)</td>
-      <td>1.9</td>
-      <td>(0.1)</td>
-      <td>(0.1)</td>
-      <td>1.8</td>
-      <td>0.7</td>
-      <td>(0.0)</td>
-      <td>19.3</td>
-      <td>2.4</td>
-      <td>(0.1)</td>
-      <td>65.1</td>
-      <td>1.8</td>
+      <td>21.9</td>
+      <td>1.6</td>
     </tr>
     <tr>
       <th>XBE</th>
@@ -1835,7 +1835,7 @@ Latest estimated variant proportion.
       <td>0.1</td>
       <td>(0.0)</td>
       <td>0.0</td>
-      <td>4.1</td>
+      <td>3.6</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
       <td>(0.0)</td>
@@ -1843,6 +1843,6 @@ Latest estimated variant proportion.
   </tbody>
 </table></small>
 
-Shown is the estimated variant proportion on 2022-11-03 in percent. 
+Shown is the estimated variant proportion on 2022-11-07 in percent. 
 
 Values in parentheses mean that the variant has not been detected in the specific country and are imputed instead.
