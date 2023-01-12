@@ -4,7 +4,7 @@ This repository uses the [genomicsurveillance](https://github.com/gerstung-lab/g
 
 The model is described in detail in our publication [Genomic reconstruction of the SARS-CoV-2 epidemic in England](https://www.nature.com/articles/s41586-021-04069-y).
 
-The current code pulls aggregated data from [cov-spectrum.org](cov-spectrum.org); the underlying data is proved by GISAID. Case data is from [Our World in Data](https://ourworldindata.org/explorers/coronavirus-data-explorer).
+The current code pulls aggregated data from [cov-spectrum.org](https://cov-spectrum.org); the underlying data is proved by GISAID. Case data is from [Our World in Data](https://ourworldindata.org/explorers/coronavirus-data-explorer).
 
 Latest update: 2023-01-10, based on 8447893 genomic sequences.
 
