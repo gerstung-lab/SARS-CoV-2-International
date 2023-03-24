@@ -8,6 +8,8 @@ The current code pulls aggregated data from [cov-spectrum.org](cov-spectrum.org)
 
 Latest update: 2023-03-24, based on 9161381 genomic sequences.
 
+![Map](plots/variant-map.png)
+
 ## Growth rates
 ![Growth rates](plots/growth-rate-latest.png)
 
